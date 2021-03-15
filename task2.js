@@ -1,5 +1,5 @@
 import fs from 'fs';
-import csv from "csvtojson";
+import csvtojson from "csvtojson";
 
 
 const csvFile = './csv/1.csv';
@@ -9,18 +9,14 @@ const writable = fs.createWriteStream('./txt/out.json');
 
 
 // readable
-// .pipe(csv())
+// .pipe(csvtojson())
 // .on('data', chunk => console.log(chunk))
 // .pipe(writable);
 
 
-// csv().fromStream(readable).then((jsonObj)=>{
-//     console.log(jsonObj);
-// })
+csvtojson().fromStream(readable).pipe(writable);
 
-readable.on('data', chunk => {
-    console.log(chunk);  
-});
+
 
 readable.on('close', () => {
     console.log('close');  
