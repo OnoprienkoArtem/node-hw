@@ -10,7 +10,7 @@ import readline from 'readline';
     });
 
     rl.on('line', line => {
-        console.log(reverseString(line));
+        process.stdout.write(reverseString(line)); 
     });
 }
 
