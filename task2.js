@@ -15,7 +15,7 @@ const task2 = () => {
         terminal: false
     });
 
-    rl.on('line', line => rl.output.write(line))    
+    rl.on('line', line => rl.output.write(`${line}\n`));
 
 
     rl.on('close', () => {
