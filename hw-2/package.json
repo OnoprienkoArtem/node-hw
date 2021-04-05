@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "start": "node index.ts",
-    "dev": "nodemon -x ts-node index.ts"
+    "dev": "nodemon -x ts-node index.ts",
+    "lint": "eslint . --ext .ts"
   },
   "keywords": [],
   "author": "",
