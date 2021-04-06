@@ -7,7 +7,7 @@ import { validateSchema } from '../validation/validator';
 
 const router = express.Router();
 
-router.get('/', (req: Request, res: Response) => {    
+router.get('/', (req: Request, res: Response) => {
     try {
         res.send(getAutoSuggestUsers(req.query.login, Number(req.query.limit)));
     } catch (error) {
